@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalai Catering Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">KALAI <span>CATERING</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <p class="tagline">TASTE • QUALITY • HAPPINESS</p>
+
+            <h1>Delicious Food.<br>
+                <span>Beautiful Memories.</span>
+            </h1>
+
+            <p class="intro">
+                Making your special occasions memorable
+                with delicious vegetarian and non-vegetarian food.
+            </p>
+
+            <a class="button" href="#contact">Book Your Catering</a>
+        </section>
+
+        <section class="services" id="services">
+            <p class="tagline">WHAT WE OFFER</p>
+            <h2>Our Catering Services</h2>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <div class="service-icon">💍</div>
+                    <h3>Wedding Catering</h3>
+                    <p>Delicious food for your special day.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">🎂</div>
+                    <h3>Birthday Parties</h3>
+                    <p>Make every celebration more special.</p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon">🍽️</div>
+                    <h3>Bulk Catering</h3>
+                    <p>Food arrangements for events of different sizes.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- MENU SECTION -->
+<section class="menu-section" id="menu">
+    <p class="tagline">OUR FOOD MENU</p>
+    <h2>Delicious Food for Every Occasion</h2>
+    <p class="menu-intro">
+        Choose vegetarian or non-vegetarian catering
+        for your special event.
+    </p>
+
+    <div class="menu-grid">
+
+        <article class="menu-card">
+            <img src="image/veg-food.jpg"
+                 alt="South Indian vegetarian catering food">
+            <div class="menu-content">
+                <h3>Vegetarian Menu</h3>
+                <p>Rice, sambar, rasam, poriyal,
+                   kootu, curd and sweets.</p>
+                <a class="menu-link" href="#contact">
+                    Enquire for Veg Menu
+                </a>
+            </div>
+        </article>
+
+        <article class="menu-card">
+            <img src="image/non-veg food.jpg"
+                 alt="South Indian non vegetarian catering food">
+            <div class="menu-content">
+                <h3>Non-Vegetarian Menu</h3>
+                <p>Biryani, chicken dishes,
+                   gravies and side dishes.</p>
+                <a class="menu-link" href="#contact">
+                    Enquire for Non-Veg Menu
+                </a>
+            </div>
+        </article>
+
+        <article class="menu-card">
+            <img src="image/wedding food.jpg"
+                 alt="Wedding catering food buffet">
+            <div class="menu-content">
+                <h3>Wedding & Bulk Orders</h3>
+                <p>Custom menus for weddings,
+                   family functions and events.</p>
+                <a class="menu-link" href="#contact">
+                    Plan Your Event
+                </a>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+        <section class="about" id="about">
+            <p class="tagline">WHY CHOOSE US</p>
+            <h2>Good Food, Great Moments</h2>
+            <p>
+                We provide vegetarian and non-vegetarian catering
+                for weddings, family functions and special events.
+                Contact us to discuss your menu and requirements.
+            </p>
+        </section>
+<!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+    <p class="tagline">LET'S PLAN YOUR EVENT</p>
+    <h2>Make Your Event Delicious!</h2>
+
+    <p>Contact us for menu details and catering prices.</p>
+
+    <div class="phone-details">
+        <p>Call us:</p>
+        <a href="tel:+919003268774">90032 68774</a>
+        <span>|</span>
+        <a href="tel:+919345286410">93452 86410</a>
+    </div>
+
+    <p class="form-note">
+        Share your event details below for a quick enquiry.
+    </p>
+
+    <form id="enquiry-form" class="enquiry-form">
+        <label for="customer-name">Your Name</label>
+        <input type="text" id="customer-name"
+               placeholder="Enter your name" required>
+
+        <label for="event-date">Event Date</label>
+        <input type="date" id="event-date" required>
+
+        <label for="event-location">Event Location</label>
+        <input type="text" id="event-location"
+               placeholder="Example: Medavakkam" required>
+
+        <label for="guest-count">Number of Guests</label>
+        <input type="number" id="guest-count"
+               min="1" placeholder="Example: 100" required>
+
+        <label for="food-type">Food Preference</label>
+        <select id="food-type" required>
+            <option value="">Select food type</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Non-vegetarian">Non-vegetarian</option>
+            <option value="Both veg and non-veg">Both veg and non-veg</option>
+        </select>
+
+        <button class="button" type="submit">
+            Send Enquiry on WhatsApp
+        </button>
+    </form>
+</section>
+        
+    </main>
+
+    <footer>
+        <p>© 2026 Kalai Catering Services. All rights reserved.</p>
+    </footer>
+    <script>
+const enquiryForm = document.getElementById("enquiry-form");
+
+enquiryForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("customer-name").value.trim();
+    const date = document.getElementById("event-date").value;
+    const location = document.getElementById("event-location").value.trim();
+    const guests = document.getElementById("guest-count").value;
+    const food = document.getElementById("food-type").value;
+
+    const message =
+        "Hello Kalai Catering Services!\n\n" +
+        "I would like to enquire about catering.\n" +
+        "Name: " + name + "\n" +
+        "Event Date: " + date + "\n" +
+        "Location: " + location + "\n" +
+        "Number of Guests: " + guests + "\n" +
+        "Food Preference: " + food + "\n\n" +
+        "Please share the menu and pricing. Thank you!";
+
+    const whatsappNumber = "919003268774";
+
+    const whatsappURL =
+        "https://wa.me/" + whatsappNumber +
+        "?text=" + encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+});
+</script>
+</body>
+</html>
